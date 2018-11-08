@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from '../Button'
+
 import HeaderStyledComponents from './HeaderStyledComponents'
 
 class Header extends Component {
@@ -11,7 +13,7 @@ class Header extends Component {
             <div className="progress">3 tasks</div>
         </div>
         <div className="button-wrapper">
-            <div>+</div>
+          <Button />
         </div>
       </HeaderStyledComponents>
     );
