@@ -8,7 +8,7 @@ class CheckBox extends Component {
       <CheckBoxStyledComponents>
         <label>
           <input type="checkbox" />
-          <span></span>
+          <span className="checker"></span>
         </label>
       </CheckBoxStyledComponents>
     )
