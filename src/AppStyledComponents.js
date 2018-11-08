@@ -5,4 +5,7 @@ export default styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: white;
+    margin-top: 32px;
+    border-radius: 20px;
 `
