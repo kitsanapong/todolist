@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header'
+import TodoItem from './TodoItem'
 
 import AppStyledComponents from './AppStyledComponents'
 
@@ -9,6 +10,13 @@ class App extends Component {
     return (
       <AppStyledComponents>
         <Header />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
       </AppStyledComponents>
     );
   }
