@@ -6,7 +6,17 @@ class TodoItem extends Component {
   render() {
     return (
       <TodoItemStyledComponent>
-        Item
+        <div className="left">
+            <div className="checkbox-wrapper">
+                /
+            </div>
+            <div className="input-wrapper">
+                <input  type="text" value="Play Badminton" />
+            </div>
+        </div>
+        <div className="right">
+            <div className="icon-wrapper">/</div>
+        </div>
       </TodoItemStyledComponent>
     );
   }
