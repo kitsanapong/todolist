@@ -7,8 +7,10 @@ export default styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     .left {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 `
