@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import TodoItemStyledComponent from './TodoItemStyledComponent'
 import CheckBox from '../CheckBox'
+import TextInput from '../TextInput'
 
 class TodoItem extends Component {
   render() {
@@ -12,7 +13,7 @@ class TodoItem extends Component {
               <CheckBox />
             </div>
             <div className="input-wrapper">
-                <input  type="text" value="Play Badminton" />
+              <TextInput />
             </div>
         </div>
         <div className="right">

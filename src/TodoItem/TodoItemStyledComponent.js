@@ -9,8 +9,13 @@ export default styled.div`
     justify-content: space-between;
     align-items: center;
     .left {
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
+        .input-wrapper {
+            width: 100%;
+            margin-left: 12px;
+        }
     }
 `
