@@ -21,6 +21,7 @@ export default styled.div`
     .right {
         position: relative;
         .icon-wrapper {
+            opacity: 0;
             cursor: pointer;
             position: absolute;
             width: 24px;
@@ -30,6 +31,9 @@ export default styled.div`
             justify-content: center;
             color: #79797E;
             top: -36px;
+            &.visible {
+                opacity: 1;
+            }
         }
     }
 `

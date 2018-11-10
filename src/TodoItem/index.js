@@ -44,6 +44,14 @@ class TodoItem extends Component {
     })
   }
 
+  renderDeleteIcon() {
+    let className = 'icon-wrapper'
+    className += this.state.isMouseOver === true ? ' visible' : ''
+    return (
+      <div className={className} onClick={this.props.onDeleteTodo.bind(this)}>x</div>
+    )
+  }
+
   render() {
     return (
       <TodoItemStyledComponent
@@ -59,7 +67,7 @@ class TodoItem extends Component {
           </div>
         </div>
         <div className="right">
-          <div className="icon-wrapper" onClick={this.props.onDeleteTodo.bind(this)}>x</div>
+          { this.renderDeleteIcon() }
         </div>
       </TodoItemStyledComponent>
     );
