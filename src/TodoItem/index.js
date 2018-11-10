@@ -5,6 +5,13 @@ import CheckBox from '../CheckBox'
 import TextInput from '../TextInput'
 
 class TodoItem extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      done: false,
+    }
+  }
+
   render() {
     return (
       <TodoItemStyledComponent>
