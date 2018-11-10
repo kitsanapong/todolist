@@ -12,12 +12,28 @@ class TodoItem extends Component {
     }
   }
 
+  renderCheckBox() {
+    const { done } = this.state
+    return (
+      <CheckBox
+        checked={done === true}
+        onClick={(e) => { this.handleCheckBoxChange(e) }}
+      />
+    )
+  }
+
+  handleCheckBoxChange(e) {
+    this.setState({
+      done: !this.state.done,
+    })
+  }
+
   render() {
     return (
       <TodoItemStyledComponent>
         <div className="left">
             <div className="checkbox-wrapper">
-              <CheckBox />
+              { this.renderCheckBox() }
             </div>
             <div className="input-wrapper">
               <TextInput done={true}/>
