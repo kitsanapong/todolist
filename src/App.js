@@ -86,7 +86,12 @@ class App extends Component {
   }
 
   handleDeleteTodo(index) {
-    console.log(index)
+    this.setState({
+      todos: [
+        ...this.state.todos.slice(0, index),
+        ...this.state.todos.slice(index + 1)
+      ],
+    })
   }
 
   render() {
