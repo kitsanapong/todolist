@@ -100,11 +100,14 @@ class App extends Component {
   }
 
   renderModeSelection() {
+    const allModeClassName = this.state.mode === ALL_MODE? ' active' : ''
+    const doneModeClassName = this.state.mode === DONE_MODE? ' active' : ''
+    const remainModeClassName = this.state.mode === REMAIN_MODE? ' active' : ''
     return (
       <div className="mode-selection-wrapper">
-        <div className="mode-item active" onClick={() => { this.changeMode(ALL_MODE) }}>All</div>
-        <div className="mode-item" onClick={() => { this.changeMode(DONE_MODE) }}>Done</div>
-        <div className="mode-item" onClick={() => { this.changeMode(REMAIN_MODE) }}>Remain</div>
+        <div className={`mode-item all-mode ${allModeClassName}`} onClick={() => { this.changeMode(ALL_MODE) }}>All</div>
+        <div className={`mode-item done-mode ${doneModeClassName}`} onClick={() => { this.changeMode(DONE_MODE) }}>Done</div>
+        <div className={`mode-item remain-mode ${remainModeClassName}`} onClick={() => { this.changeMode(REMAIN_MODE) }}>Remain</div>
       </div>
     )
   }

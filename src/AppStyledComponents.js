@@ -19,7 +19,6 @@ export default styled.div`
             font-weight: bolder;
             font-size: 12px;
             margin-left: 6px;
-            width: 30px;
             height: 16px;
             text-align: center;
             cursor: pointer;
@@ -30,6 +29,15 @@ export default styled.div`
                 background-color: #5C76E4;
                 color: white;
                 border-radius: 3px;
+            }
+            &.all-mode {
+                width: 30px;
+            }
+            &.done-mode {
+                width: 40px;
+            }
+            &.remain-mode {
+                width: 50px;
             }
         }
     }
