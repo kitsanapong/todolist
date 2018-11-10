@@ -48,7 +48,7 @@ class TodoItem extends Component {
     let className = 'icon-wrapper'
     className += this.state.isMouseOver === true ? ' visible' : ''
     return (
-      <div className={className} onClick={this.props.onDeleteTodo.bind(this)}>x</div>
+      <div className={className} onClick={this.props.onDeleteTodo.bind(this)}>X</div>
     )
   }
 

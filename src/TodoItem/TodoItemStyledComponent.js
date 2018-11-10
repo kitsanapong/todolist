@@ -24,13 +24,20 @@ export default styled.div`
             opacity: 0;
             cursor: pointer;
             position: absolute;
-            width: 24px;
-            height: 72px;
+            width: 36px;
+            height: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #79797E;
-            top: -36px;
+            top: -23.5px;
+            left: 6px;
+            font-size: 16px;
+            background-color: red;
+            color: white;
+            border-top-left-radius: 14px;
+            border-bottom-left-radius: 14px;
+            box-shadow: rgba(0,0,0,0.16) 0px 3px 10px, rgba(0,0,0,0.23) 0px 3px 10px;
             &.visible {
                 opacity: 1;
             }
