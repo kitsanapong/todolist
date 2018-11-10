@@ -13,7 +13,7 @@ class Header extends Component {
             <div className="progress">3 tasks</div>
         </div>
         <div className="button-wrapper">
-          <Button />
+          <Button onClick={this.props.handleAddNewTodo.bind(this)}/>
         </div>
       </HeaderStyledComponents>
     );
