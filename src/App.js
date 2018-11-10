@@ -5,10 +5,15 @@ import TodoItem from './TodoItem'
 
 import AppStyledComponents from './AppStyledComponents'
 
+const ALL_MODE = 'ALL_MODE'
+const DONE_MODE = 'DONE_MODE'
+const REMAIN_MODE = 'REMAIN_MODE'
+
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      mode: ALL_MODE,
       todos: [
         {
           id: 0,
@@ -97,11 +102,17 @@ class App extends Component {
   renderModeSelection() {
     return (
       <div className="mode-selection-wrapper">
-        <div className="mode-item active">All</div>
-        <div className="mode-item">Done</div>
-        <div className="mode-item">Remain</div>
+        <div className="mode-item active" onClick={() => { this.changeMode(ALL_MODE) }}>All</div>
+        <div className="mode-item" onClick={() => { this.changeMode(DONE_MODE) }}>Done</div>
+        <div className="mode-item" onClick={() => { this.changeMode(REMAIN_MODE) }}>Remain</div>
       </div>
     )
+  }
+
+  changeMode(mode) {
+    this.setState({
+      mode: mode,
+    })
   }
 
   render() {
