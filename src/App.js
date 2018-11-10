@@ -31,14 +31,18 @@ class App extends Component {
   }
 
   handleAddNewTodo() {
-    const newTodo = {
-      id: this.state.todos.length,
-      done: false,
-      description: '',
+    const { todos } = this.state
+    const lastTodo = todos[todos.length - 1]
+    if (todos.length === 0 || lastTodo.description !== '') {
+      const newTodo = {
+        id: this.state.todos.length,
+        done: false,
+        description: '',
+      }
+      this.setState({
+        todos: [...this.state.todos, newTodo],
+      })
     }
-    this.setState({
-      todos: [...this.state.todos, newTodo],
-    })
   }
 
   render() {
