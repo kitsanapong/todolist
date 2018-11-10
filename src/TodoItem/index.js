@@ -8,7 +8,7 @@ class TodoItem extends Component {
   renderCheckBox() {
     return (
       <CheckBox
-        checked={false}
+        checked={this.props.done}
         onClick={(e) => { this.props.onCheckBoxChange(e) }}
       />
     )
@@ -17,7 +17,7 @@ class TodoItem extends Component {
   renderTextInput() {
     return (
       <TextInput
-        done={false}
+        done={this.props.done}
         value={this.props.value}
         onChange={this.props.onTextInputChange.bind(this)}
         focus={this.props.focus}

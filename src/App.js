@@ -23,6 +23,7 @@ class App extends Component {
           onTextInputChange={(e) => { this.handleTodoChange(e, index) }}
           onCheckBoxChange={(e) => { this.handleCheckBoxChange(e, index) }}
           focus={(index === todos.length - 1) && (todo.description === '')}
+          done={todo.done}
         />
       )
     })
@@ -49,7 +50,7 @@ class App extends Component {
     })
   }
 
-  handleCheckBoxChange(e, index) {)
+  handleCheckBoxChange(e, index) {
     const { todos } = this.state
     const editingTodo = {...todos[index]}
     editingTodo.done = !editingTodo.done
