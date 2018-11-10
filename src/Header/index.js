@@ -8,7 +8,7 @@ class Header extends Component {
   renderRemaining() {
     const { todos } = this.props
     const remainingTodos = todos.filter((todo) => { return todo.done === false })
-    if (remainingTodos.length > 0) {
+    if (todos.length > 0) {
       return `${100 - Math.ceil(remainingTodos.length/todos.length*100)}% done`
     } else {
       return ''
