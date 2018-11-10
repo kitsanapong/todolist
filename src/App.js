@@ -28,6 +28,17 @@ class App extends Component {
     )
   }
 
+  handleAddNewTodo() {
+    const newTodo = {
+      id: this.state.todos.length,
+      done: false,
+      description: '',
+    }
+    this.setState({
+      todos: [...this.state.todos, newTodo],
+    })
+  }
+
   render() {
     return (
       <AppStyledComponents>
