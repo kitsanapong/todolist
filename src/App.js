@@ -94,6 +94,16 @@ class App extends Component {
     })
   }
 
+  renderModeSelection() {
+    return (
+      <div className="mode-selection-wrapper">
+        <div className="mode-item active">All</div>
+        <div className="mode-item">Done</div>
+        <div className="mode-item">Remain</div>
+      </div>
+    )
+  }
+
   render() {
     return (
       <AppStyledComponents>
@@ -101,6 +111,7 @@ class App extends Component {
           todos={this.state.todos}
           handleAddNewTodo={this.handleAddNewTodo.bind(this)}
         />
+        { this.renderModeSelection() }
         { this.renderTodoList() }
       </AppStyledComponents>
     );

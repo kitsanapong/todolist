@@ -12,4 +12,24 @@ export default styled.div`
     .todo-list-wrapper {
         margin-top: 24px;
     }
+    .mode-selection-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 42px;
+        .mode-item {
+            color: #D0D0D1;
+            font-weight: bolder;
+            font-size: 12px;
+            margin-left: 6px;
+            width: 30px;
+            height: 16px;
+            text-align: center;
+            &.active {
+                background-color: #5C76E4;
+                color: white;
+                border-radius: 3px;
+            }
+        }
+    }
 `
