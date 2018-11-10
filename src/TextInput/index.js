@@ -6,7 +6,7 @@ class TextInput extends Component {
   render() {
     return (
       <TextInputStyledComponents>
-        <input type="text" value="Play Badminton" />
+        <input type="text" value="Play badminton" />
         <span className="underline"></span>
       </TextInputStyledComponents>
     )

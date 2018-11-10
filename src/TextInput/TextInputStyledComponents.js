@@ -7,6 +7,7 @@ export default styled.div`
     font-size: 22px;
     outline-style: none;
     color: #79797E;
+    width: 100%;
   }
   .underline {
     position: absolute;
