@@ -16,6 +16,7 @@ export default styled.div`
     outline-style: none;
     color: #79797E;
     width: 100%;
+    transition: 0.3s;
   }
   .underline {
     position: absolute;
