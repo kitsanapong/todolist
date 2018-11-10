@@ -9,7 +9,13 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      todos: [],
+      todos: [
+        {
+          id: 0,
+          done: false,
+          description: '',
+        }
+      ],
     }
   }
 
