@@ -13,7 +13,7 @@ class TodoItem extends Component {
               <CheckBox />
             </div>
             <div className="input-wrapper">
-              <TextInput />
+              <TextInput done={true}/>
             </div>
         </div>
         <div className="right">
