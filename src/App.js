@@ -82,6 +82,7 @@ class App extends Component {
     return (
       <AppStyledComponents>
         <Header
+          todos={this.state.todos}
           handleAddNewTodo={this.handleAddNewTodo.bind(this)}
         />
         { this.renderTodoList() }
