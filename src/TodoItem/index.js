@@ -28,6 +28,15 @@ class TodoItem extends Component {
     })
   }
 
+  renderTextInput() {
+    const { done } = this.state
+    return (
+      <TextInput
+        done={done}
+      />
+    )
+  }
+
   render() {
     return (
       <TodoItemStyledComponent>
@@ -36,7 +45,7 @@ class TodoItem extends Component {
               { this.renderCheckBox() }
             </div>
             <div className="input-wrapper">
-              <TextInput done={true}/>
+              { this.renderTextInput() }
             </div>
         </div>
         <div className="right">
