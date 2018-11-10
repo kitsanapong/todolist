@@ -18,7 +18,7 @@ class App extends Component {
     const todosItemList = todos.map((todo) => {
       return (
         <TodoItem
-          id={todo.id}
+          key={todo.id}
         />
       )
     })
