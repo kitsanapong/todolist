@@ -30,6 +30,7 @@ class App extends Component {
           onCheckBoxChange={(e) => { this.handleCheckBoxChange(e, index) }}
           focus={(index === todos.length - 1) && (todo.description === '')}
           done={todo.done}
+          onDeleteTodo={() => { this.handleDeleteTodo(index) }}
         />
       )
     })
@@ -82,6 +83,10 @@ class App extends Component {
         todos: [...this.state.todos, newTodo],
       })
     }
+  }
+
+  handleDeleteTodo(index) {
+    console.log(index)
   }
 
   render() {

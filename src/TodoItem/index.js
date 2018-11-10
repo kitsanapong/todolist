@@ -29,19 +29,23 @@ class TodoItem extends Component {
     return (
       <TodoItemStyledComponent>
         <div className="left">
-            <div className="checkbox-wrapper">
-              { this.renderCheckBox() }
-            </div>
-            <div className="input-wrapper">
-              { this.renderTextInput() }
-            </div>
+          <div className="checkbox-wrapper">
+            { this.renderCheckBox() }
+          </div>
+          <div className="input-wrapper">
+            { this.renderTextInput() }
+          </div>
         </div>
         <div className="right">
-            <div className="icon-wrapper">x</div>
+          <div className="icon-wrapper" onClick={this.props.onDeleteTodo.bind(this)}>x</div>
         </div>
       </TodoItemStyledComponent>
     );
   }
+}
+
+TodoItem.defaultProps = {
+  onDeleteTodo: () => {},
 }
 
 export default TodoItem;
