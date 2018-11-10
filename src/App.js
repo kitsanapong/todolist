@@ -42,7 +42,9 @@ class App extends Component {
   render() {
     return (
       <AppStyledComponents>
-        <Header />
+        <Header
+          handleAddNewTodo={this.handleAddNewTodo.bind(this)}
+        />
         { this.renderTodoList() }
       </AppStyledComponents>
     );
