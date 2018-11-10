@@ -37,7 +37,7 @@ class TodoItem extends Component {
             </div>
         </div>
         <div className="right">
-            {/* <div className="icon-wrapper">/</div> */}
+            <div className="icon-wrapper">x</div>
         </div>
       </TodoItemStyledComponent>
     );

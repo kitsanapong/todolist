@@ -18,4 +18,18 @@ export default styled.div`
             margin-left: 12px;
         }
     }
+    .right {
+        position: relative;
+        .icon-wrapper {
+            cursor: pointer;
+            position: absolute;
+            width: 24px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #79797E;
+            top: -36px;
+        }
+    }
 `
