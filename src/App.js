@@ -20,7 +20,7 @@ class App extends Component {
         <TodoItem
           key={todo.id}
           value={todo.description}
-          onTextInputChange={(e) => { this.handleTodoChange(e, index) }}
+          onTextInputChange={(e) => { this.handleTodoTextChange(e, index) }}
           onCheckBoxChange={(e) => { this.handleCheckBoxChange(e, index) }}
           focus={(index === todos.length - 1) && (todo.description === '')}
           done={todo.done}
@@ -35,7 +35,7 @@ class App extends Component {
     )
   }
 
-  handleTodoChange(e, index) {
+  handleTodoTextChange(e, index) {
     const { todos } = this.state
     const editingTodo = {
       ...todos[index],
