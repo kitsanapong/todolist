@@ -17,7 +17,9 @@ class App extends Component {
     const { todos } = this.state
     const todosItemList = todos.map((todo) => {
       return (
-        <TodoItem />
+        <TodoItem
+          id={todo.id}
+        />
       )
     })
 
