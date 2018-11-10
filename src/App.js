@@ -6,6 +6,13 @@ import TodoItem from './TodoItem'
 import AppStyledComponents from './AppStyledComponents'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      todos: [],
+    }
+  }
+
   renderTodoList() {
     return (
       <div className="todo-list-wrapper">
