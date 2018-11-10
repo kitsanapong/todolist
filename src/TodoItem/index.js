@@ -33,6 +33,8 @@ class TodoItem extends Component {
     return (
       <TextInput
         done={done}
+        value={this.props.value}
+        onChange={this.props.onTextInputChange.bind(this)}
       />
     )
   }

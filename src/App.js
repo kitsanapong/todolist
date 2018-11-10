@@ -15,10 +15,12 @@ class App extends Component {
 
   renderTodoList() {
     const { todos } = this.state
-    const todosItemList = todos.map((todo) => {
+    const todosItemList = todos.map((todo, index) => {
       return (
         <TodoItem
           key={todo.id}
+          value={todo.description}
+          onTextInputChange={(e) => { this.handleTodoChange(e, index) }}
         />
       )
     })
@@ -28,6 +30,21 @@ class App extends Component {
         { todosItemList }
       </div>
     )
+  }
+
+  handleTodoChange(e, index) {
+    const { todos } = this.state
+    const editingTodo = {
+      ...todos[index],
+      description: e.target.value,
+    }
+    this.setState({
+      todos: [
+        ...this.state.todos.slice(0, index),
+        editingTodo,
+        ...this.state.todos.slice(index + 1)
+      ],
+    })
   }
 
   handleAddNewTodo() {
