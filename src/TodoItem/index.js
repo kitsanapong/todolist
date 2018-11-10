@@ -5,6 +5,13 @@ import CheckBox from '../CheckBox'
 import TextInput from '../TextInput'
 
 class TodoItem extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMouseOver: false,
+    }
+  }
+
   renderCheckBox() {
     return (
       <CheckBox
@@ -25,9 +32,24 @@ class TodoItem extends Component {
     )
   }
 
+  handleMouseOver() {
+    this.setState({
+      isMouseOver: true,
+    })
+  }
+
+  handleMouseOut() {
+    this.setState({
+      isMouseOver: false,
+    })
+  }
+
   render() {
     return (
-      <TodoItemStyledComponent>
+      <TodoItemStyledComponent
+        onMouseOver={() => { this.handleMouseOver() }}
+        onMouseOut={() => { this.handleMouseOut() }}
+      >
         <div className="left">
           <div className="checkbox-wrapper">
             { this.renderCheckBox() }
