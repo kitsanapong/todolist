@@ -4,6 +4,10 @@ import TextInputStyledComponents from './TextInputStyledComponents'
 
 class TextInput extends Component {
   componentDidMount() {
+    this.focusInput()
+  }
+
+  focusInput() {
     if (this.input && this.props.focus === true) {
       this.input.focus()
     }

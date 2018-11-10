@@ -35,6 +35,7 @@ class TodoItem extends Component {
         done={done}
         value={this.props.value}
         onChange={this.props.onTextInputChange.bind(this)}
+        focus={this.props.focus}
       />
     )
   }

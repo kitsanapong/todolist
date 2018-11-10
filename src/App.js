@@ -21,6 +21,7 @@ class App extends Component {
           key={todo.id}
           value={todo.description}
           onTextInputChange={(e) => { this.handleTodoChange(e, index) }}
+          focus={(index === todos.length - 1) && (todo.description === '')}
         />
       )
     })
