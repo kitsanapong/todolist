@@ -5,34 +5,19 @@ import CheckBox from '../CheckBox'
 import TextInput from '../TextInput'
 
 class TodoItem extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      done: false,
-    }
-  }
-
   renderCheckBox() {
-    const { done } = this.state
     return (
       <CheckBox
-        checked={done === true}
-        onClick={(e) => { this.handleCheckBoxChange(e) }}
+        checked={false}
+        onClick={(e) => { this.props.onCheckBoxChange(e) }}
       />
     )
   }
 
-  handleCheckBoxChange(e) {
-    this.setState({
-      done: !this.state.done,
-    })
-  }
-
   renderTextInput() {
-    const { done } = this.state
     return (
       <TextInput
-        done={done}
+        done={false}
         value={this.props.value}
         onChange={this.props.onTextInputChange.bind(this)}
         focus={this.props.focus}

@@ -21,6 +21,7 @@ class App extends Component {
           key={todo.id}
           value={todo.description}
           onTextInputChange={(e) => { this.handleTodoChange(e, index) }}
+          onCheckBoxChange={(e) => { this.handleCheckBoxChange(e, index) }}
           focus={(index === todos.length - 1) && (todo.description === '')}
         />
       )
@@ -39,6 +40,19 @@ class App extends Component {
       ...todos[index],
       description: e.target.value,
     }
+    this.setState({
+      todos: [
+        ...this.state.todos.slice(0, index),
+        editingTodo,
+        ...this.state.todos.slice(index + 1)
+      ],
+    })
+  }
+
+  handleCheckBoxChange(e, index) {)
+    const { todos } = this.state
+    const editingTodo = {...todos[index]}
+    editingTodo.done = !editingTodo.done
     this.setState({
       todos: [
         ...this.state.todos.slice(0, index),
