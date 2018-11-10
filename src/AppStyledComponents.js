@@ -9,9 +9,6 @@ export default styled.div`
     margin-top: 32px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
-    .todo-list-wrapper {
-        margin-top: 24px;
-    }
     .mode-selection-wrapper {
         display: flex;
         flex-direction: row;
