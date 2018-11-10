@@ -26,7 +26,8 @@ class App extends Component {
 
   renderTodoList() {
     const { todos } = this.state
-    const todosItemList = todos.map((todo, index) => {
+    const todosItemList = todos.filter(this.filterTodoByMode.bind(this))
+    .map((todo, index) => {
       return (
         <TodoItem
           key={todo.id}
@@ -45,6 +46,18 @@ class App extends Component {
         { todosItemList }
       </div>
     )
+  }
+
+  filterTodoByMode(todo) {
+    if (this.state.mode === ALL_MODE) {
+      return true
+    } else if(this.state.mode === DONE_MODE) {
+      return todo.done === true
+    } else if(this.state.mode === REMAIN_MODE) {
+      return todo.done === false
+    } else {
+      return false
+    }
   }
 
   handleTodoTextChange(e, index) {
