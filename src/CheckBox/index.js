@@ -7,12 +7,21 @@ class CheckBox extends Component {
     return (
       <CheckBoxStyledComponents>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={this.props.checked}
+            onClick={this.props.onClick.bind(this)}
+          />
           <span className="checker"></span>
         </label>
       </CheckBoxStyledComponents>
     )
   }
+}
+
+CheckBox.defaultProps = {
+  onClick: () => {},
+  checked: false,
 }
 
 export default CheckBox
