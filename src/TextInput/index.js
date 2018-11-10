@@ -12,11 +12,16 @@ class TextInput extends Component {
   render() {
     return (
       <TextInputStyledComponents className={this.getClassName()}>
-        <input type="text" value="Play badminton" />
+        <input type="text" value={this.props.value} onChange={this.props.onChange.bind(this)} />
         <span className="underline"></span>
       </TextInputStyledComponents>
     )
   }
+}
+
+TextInput.defaultProps = {
+  value: '',
+  onChange: () => {},
 }
 
 export default TextInput
