@@ -13,3 +13,6 @@ with below features.
 $ npm install
 $ npm start
 ```
+
+# Preview
+![preview](./public/sample.png)
