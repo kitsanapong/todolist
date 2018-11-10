@@ -99,6 +99,8 @@ class App extends Component {
       }
       this.setState({
         todos: [...this.state.todos, newTodo],
+      }, () => {
+        this.changeMode(ALL_MODE)
       })
     }
   }
