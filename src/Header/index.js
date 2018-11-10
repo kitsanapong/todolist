@@ -11,7 +11,7 @@ class Header extends Component {
     if (todos.length > 0) {
       return `${100 - Math.ceil(remainingTodos.length/todos.length*100)}% done`
     } else {
-      return ''
+      return 'No task'
     }
   }
 
