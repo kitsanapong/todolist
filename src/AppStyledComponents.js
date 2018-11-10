@@ -22,6 +22,10 @@ export default styled.div`
             width: 30px;
             height: 16px;
             text-align: center;
+            cursor: pointer;
+            :hover {
+                color: #5C76E4;
+            }
             &.active {
                 background-color: #5C76E4;
                 color: white;
