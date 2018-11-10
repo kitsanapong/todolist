@@ -14,15 +14,16 @@ class App extends Component {
   }
 
   renderTodoList() {
+    const { todos } = this.state
+    const todosItemList = todos.map((todo) => {
+      return (
+        <TodoItem />
+      )
+    })
+
     return (
       <div className="todo-list-wrapper">
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        { todosItemList }
       </div>
     )
   }
