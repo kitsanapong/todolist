@@ -24,6 +24,7 @@ export default styled.div`
         .content {
             top: 0px;
             position: absolute;
+            user-select: none;
         }
     }
 `

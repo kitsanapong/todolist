@@ -15,6 +15,7 @@ export default styled.div`
         justify-content: flex-end;
         padding-right: 42px;
         .mode-item {
+            user-select: none;
             color: #D0D0D1;
             font-weight: bolder;
             font-size: 12px;
